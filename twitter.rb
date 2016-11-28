@@ -3,6 +3,7 @@ require 'json'
 require 'base64'
 require 'yaml'
 require_relative 'auth'
+require_relative 'user'
 require_relative 'utils'
 
 agent = Mechanize.new()

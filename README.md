@@ -1,6 +1,3 @@
-# 
-
-
 # twitter-application-only-authentication-example
 ===============
 twitter application-only authentication example by ruby
