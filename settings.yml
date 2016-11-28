@@ -1,0 +1,6 @@
+# your agent name
+user_agent: 'My Twitter App v0.0.1'
+
+# your twitter app information
+consumer_key: ''
+consumer_secret: ''
