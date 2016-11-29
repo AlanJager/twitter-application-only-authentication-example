@@ -2,6 +2,7 @@ class User
   attr_reader :agent
   attr_reader :token
 
+  attr_reader :apis
   # attr_reader :follower_ids
   # attr_reader :follower_list
   # attr_reader :profile
@@ -16,6 +17,15 @@ class User
     # @friend_ids = friend_ids()
     # @profile = profile()
     # @income_friendship = income_friendship()
+    @apis = [
+      'follower_ids',
+      'follower_list',
+      'friend_ids',
+      'friend_list',
+      'favorites',
+      'profile',
+      'timeline'
+    ]
   end
 
   # request follower's ids
@@ -51,8 +61,21 @@ class User
   # end
 
   # request user profile 
+
+  def favorites(screen_name)
+    url = 'https://api.twitter.com/1.1/favorites/list.json?count=2&screen_name=' + screen_name
+    request(@agent, @token, url)
+  end
+
   def profile(screen_name)
     url = 'https://api.twitter.com/1.1/users/show/' + screen_name + '.json'
     request(@agent, @token, url)
   end
+
+  def timeline(screen_name)
+    url = 'https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=' + screen_name
+    request(@agent, @token, url)
+  end
+
+
 end
