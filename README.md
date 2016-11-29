@@ -5,15 +5,11 @@ twitter application-only authentication example by ruby
 TODO
 ----
 
-* finish timeline relative available APIs
+* finish trends relative available APIs
 
 FIXED
 ----
-
-BUGS
-----
-
-* friendship APIs response error
+* remove text only auth apis
 
 OPTIONAL
 ----
