@@ -8,5 +8,5 @@ def request(agent, token, url)
     'Accept-Encoding' => 'gzip'
   }
 
-  user = JSON.parse(agent.get(url, [], nil, data).body)
+  return  user = JSON.parse(agent.get(url, [], nil, data).body)
 end
